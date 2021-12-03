@@ -3,7 +3,7 @@ import {Suspense} from 'react';
 import './App.css';
 import {Canvas} from '@react-three/fiber';
 import Controls from './Controls.js';
-import Bulbasaur from './Bulbasaur.js';
+import Bulbasaur from './pokemon/Bulbasaur.js';
 
 function App() {
   return (
