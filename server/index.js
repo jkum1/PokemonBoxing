@@ -1,5 +1,6 @@
 const express = require('express');
 const axios = require('axios');
+const {Model} = require('../database/sequelize.js');
 
 const PORT = process.env.PORT || 3000;
 
