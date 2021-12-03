@@ -3,7 +3,7 @@ import {Suspense} from 'react';
 import './App.css';
 import {Canvas} from '@react-three/fiber';
 import Controls from './Controls.js';
-import Bulbasaur from './pokemon/Bulbasaur.js';
+import Pokemon from './pokemon/Lapras.js';
 
 function App() {
   return (
@@ -31,15 +31,15 @@ function App() {
         />
 
         <group>
-          <mesh receiveShadow rotation={[-Math.PI/2,0,0]} position={[0,-3,0]}>
-            <planeBufferGeometry attach='geometry' args={[100,100]}/>
+          <mesh receiveShadow rotation={[-Math.PI/2,0,0]} position={[0,-1,0]}>
+            <planeBufferGeometry attach='geometry' args={[300,300]}/>
             <shadowMaterial attach='material' opacity={0.3}/>
             <meshPhysicalMaterial attach="material" color="#eba4f7" />
           </mesh>
         </group>
 
         <Suspense fallback={null}>
-          <Bulbasaur/>
+          <Pokemon />
         </Suspense>
 
       </Canvas>

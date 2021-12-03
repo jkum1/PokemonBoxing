@@ -8,7 +8,7 @@ import { useGLTF } from '@react-three/drei'
 export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF(
-    '/pokemonGLB/Bulbasaur.glb'
+    '/pokemonGLB/Dragonite.glb'
   )
   return (
     <group ref={group} {...props} dispose={null}>
@@ -18,4 +18,4 @@ export default function Model({ ...props }) {
   )
 }
 
-useGLTF.preload('/pokemonGLB/Bulbasaur.glb')
+useGLTF.preload('/pokemonGLB/Dragonite.glb')

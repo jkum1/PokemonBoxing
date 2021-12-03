@@ -8,14 +8,13 @@ import { useGLTF } from '@react-three/drei'
 export default function Model({ ...props }) {
   const group = useRef()
   const { nodes, materials } = useGLTF(
-    '/pokemonGLB/Bulbasaur.glb'
+    '/pokemonGLB/Sandslash.glb'
   )
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.polygon0.geometry} material={nodes.polygon0.material} />
-      <mesh castShadow geometry={nodes.polygon1.geometry} material={nodes.polygon1.material} />
+      <mesh castShadow geometry={nodes.sandpan.geometry} material={nodes.sandpan.material} rotation={[Math.PI/2,0,0]}/>
     </group>
   )
 }
 
-useGLTF.preload('/pokemonGLB/Bulbasaur.glb')
+useGLTF.preload('/pokemonGLB/Sandslash.glb')
