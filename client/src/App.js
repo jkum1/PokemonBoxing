@@ -4,26 +4,25 @@ import './App.css';
 import {Canvas} from '@react-three/fiber';
 import Controls from './Controls.js';
 import Form from './Form.js';
-import Pokemon from './pokemon/Lapras.js';
 
 function App() {
   const [pokemonName, setPokemonName] = useState('Abra');
-  // const [pokemonModel, setPokemonModel] = useState();
+  const [pokemonModel, setPokemonModel] = useState();
 
   var changeName = function(name) {
     setPokemonName(name);
   }
 
-  // useEffect(() => {
-  //   let mounted = true;
-  //   if (mounted) {
-  //     const OtherComponent = React.lazy(() => import('./pokemon/' + pokemonName + '.js'));
-  //     setPokemonModel(OtherComponent());
-  //   }
-  //   return function cleanup() {
-  //     mounted = false;
-  //   }
-  // }, [pokemonName]);
+  useEffect(() => {
+    let mounted = true;
+    if (mounted) {
+      const OtherComponent = React.lazy(() => import('./pokemon/' + pokemonName + '.js'));
+      setPokemonModel(<OtherComponent/>);
+    }
+    return function cleanup() {
+      mounted = false;
+    }
+  }, [pokemonName]);
 
   return (
     <>
@@ -59,7 +58,7 @@ function App() {
         </group>
 
         <Suspense fallback={null}>
-          <Pokemon/>
+          {pokemonModel}
         </Suspense>
 
       </Canvas>
