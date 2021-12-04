@@ -7,10 +7,10 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Machop.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Machop.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.Machop.geometry} material={nodes.Machop.material} scale={[0.2,0.2,0.2]}/>
+      <mesh castShadow geometry={nodes.Machop.geometry} material={nodes.Machop.material} scale={[0.3,0.3,0.3]}/>
     </group>
   )
 }

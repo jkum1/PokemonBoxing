@@ -7,12 +7,12 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF(
+  const { nodes } = useGLTF(
     '/pokemonGLB/Poliwrath.glb'
   )
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.nyorobon.geometry} material={nodes.nyorobon.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.nyorobon.geometry} material={nodes.nyorobon.material} rotation={[Math.PI/2,0,0]} scale={[2,2,2]}/>
     </group>
   )
 }

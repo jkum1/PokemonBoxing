@@ -7,12 +7,12 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF(
+  const { nodes } = useGLTF(
     '/pokemonGLB/Sandshrew.glb'
   )
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.sand.geometry} material={nodes.sand.material} position={[0,3,0]}/>
+      <mesh castShadow geometry={nodes.sand.geometry} material={nodes.sand.material} position={[0,5,0]} scale={[3,3,3]}/>
     </group>
   )
 }

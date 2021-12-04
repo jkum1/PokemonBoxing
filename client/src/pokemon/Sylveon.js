@@ -7,12 +7,12 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes } = useGLTF('/pokemonGLB/Magikarp.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Sylveon.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.koiking.geometry} material={nodes.koiking.material} rotation={[Math.PI/2,0,0]} position={[0,10,0]} scale={[3,3,3]}/>
+      <mesh castShadow geometry={nodes.Sylveon.geometry} material={nodes.Sylveon.material} scale={0.3}/>
     </group>
   )
 }
 
-useGLTF.preload('/pokemonGLB/Magikarp.glb')
+useGLTF.preload('/pokemonGLB/Sylveon.glb')

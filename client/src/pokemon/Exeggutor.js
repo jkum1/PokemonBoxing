@@ -7,12 +7,12 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF(
+  const { nodes } = useGLTF(
     '/pokemonGLB/Exeggutor.glb'
   )
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.nassy.geometry} material={nodes.nassy.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.nassy.geometry} material={nodes.nassy.material} rotation={[Math.PI/2,0,0]} scale={[1.5,1.5,1.5]}/>
     </group>
   )
 }

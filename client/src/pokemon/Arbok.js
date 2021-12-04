@@ -7,10 +7,10 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Arbok.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Arbok.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.arbok.geometry} material={nodes.arbok.material}/>
+      <mesh castShadow geometry={nodes.arbok.geometry} material={nodes.arbok.material} rotation={[Math.PI/2,0,0]} scale={[2,2,2]}/>
     </group>
   )
 }

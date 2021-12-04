@@ -1,12 +1,21 @@
 import React, {useState} from 'react';
+import Valid from './Valid.js';
 
 export default function Form(props) {
   const [input, setInput] = useState('');
 
+  var validName = function(name) {
+    if (Valid(name)) {
+      props.changeName(name);
+    } else {
+      props.changeName('Error');
+    }
+  }
+
   return (
-    <form id='form' onSubmit={(e) => {
+    <form className='form' onSubmit={(e) => {
       e.preventDefault();
-      props.changeName(input);
+      validName(input);
       setInput('');
     }}>
       <label>
@@ -15,5 +24,5 @@ export default function Form(props) {
       </label>
       <input type='submit' value='Render'/>
     </form>
-  )
+    )
 };
