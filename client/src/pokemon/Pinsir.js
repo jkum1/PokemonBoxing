@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Pinsir.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Pinsir.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.kailios.geometry} material={nodes.kailios.material} rotation={[Math.PI/2,0,0]}/>

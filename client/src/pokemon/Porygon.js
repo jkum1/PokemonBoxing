@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Porygon.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Porygon.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.Porygon.geometry} material={nodes.Porygon.material} scale={[0.1,0.1,0.1]}/>

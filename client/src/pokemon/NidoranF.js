@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/NidoranF.glb')
+  const { nodes } = useGLTF('/pokemonGLB/NidoranF.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.NidoranF.geometry} material={nodes.NidoranF.material} scale={[0.3,0.3,0.3]}/>

@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Gloom.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Gloom.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.kusaihana.geometry} material={nodes.kusaihana.material} position={[0,3,0]}/>

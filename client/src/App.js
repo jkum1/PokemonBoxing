@@ -4,6 +4,7 @@ import './App.css';
 import {Canvas} from '@react-three/fiber';
 import Controls from './Controls.js';
 import Form from './Form.js';
+import Data from './Data.js';
 
 function App() {
   const [pokemonName, setPokemonName] = useState('Abra');
@@ -27,6 +28,7 @@ function App() {
   return (
     <>
       <Form changeName={changeName}/>
+      <Data name={pokemonName}/>
       <Canvas
         colorManagement
         shadows

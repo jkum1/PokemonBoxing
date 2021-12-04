@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Metapod.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Metapod.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.transel.geometry} material={nodes.transel.material} rotation={[Math.PI/2,0,0]}/>

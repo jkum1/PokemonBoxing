@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Grimer.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Grimer.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.betbeter.geometry} material={nodes.betbeter.material} scale={[1.5,1.5,1.5]}/>

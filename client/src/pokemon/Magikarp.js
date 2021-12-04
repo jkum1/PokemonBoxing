@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Magikarp.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Magikarp.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.koiking.geometry} material={nodes.koiking.material} rotation={[Math.PI/2,0,0]} position={[0,3,0]}/>

@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Alakazam.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Alakazam.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.foodin.geometry} material={nodes.foodin.material} position={[0,3,0]}/>

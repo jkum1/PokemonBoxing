@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Chansey.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Chansey.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.lucky.geometry} material={nodes.lucky.material} rotation={[Math.PI/2,0,0]}/>

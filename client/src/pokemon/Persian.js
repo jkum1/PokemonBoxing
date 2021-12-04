@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei'
 
 export default function Model({ ...props }) {
   const group = useRef()
-  const { nodes, materials } = useGLTF('/pokemonGLB/Persian.glb')
+  const { nodes } = useGLTF('/pokemonGLB/Persian.glb')
   return (
     <group ref={group} {...props} dispose={null}>
       <mesh castShadow geometry={nodes.persian.geometry} material={nodes.persian.material} rotation={[Math.PI/2,0,0]}/>
