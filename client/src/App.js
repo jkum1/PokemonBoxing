@@ -1,17 +1,37 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {Suspense} from 'react';
 import './App.css';
 import {Canvas} from '@react-three/fiber';
 import Controls from './Controls.js';
+import Form from './Form.js';
 import Pokemon from './pokemon/Lapras.js';
 
 function App() {
+  const [pokemonName, setPokemonName] = useState('Abra');
+  // const [pokemonModel, setPokemonModel] = useState();
+
+  var changeName = function(name) {
+    setPokemonName(name);
+  }
+
+  // useEffect(() => {
+  //   let mounted = true;
+  //   if (mounted) {
+  //     const OtherComponent = React.lazy(() => import('./pokemon/' + pokemonName + '.js'));
+  //     setPokemonModel(OtherComponent());
+  //   }
+  //   return function cleanup() {
+  //     mounted = false;
+  //   }
+  // }, [pokemonName]);
+
   return (
     <>
+      <Form changeName={changeName}/>
       <Canvas
         colorManagement
         shadows
-        camera={{position: [-5, 10, 10], fov: 60}}
+        camera={{position: [0, 45, 45], fov: 60}}
       >
         <Controls/>
         <ambientLight intensity={0.3}/>
@@ -39,7 +59,7 @@ function App() {
         </group>
 
         <Suspense fallback={null}>
-          <Pokemon />
+          <Pokemon/>
         </Suspense>
 
       </Canvas>

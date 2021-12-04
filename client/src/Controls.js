@@ -15,10 +15,11 @@ export default function Controls() {
   return (
     <orbitControls
       autoRotate
-      maxPolarAngle={Math.PI / 2}
+      maxPolarAngle={Math.PI / 3}
       minPolarAngle={Math.PI / 6}
       args={[camera, gl.domElement]}
       ref={orbitRef}
+      enableZoom={false}
     />
   )
 }
