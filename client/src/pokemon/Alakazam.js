@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Alakazam.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.foodin.geometry} material={nodes.foodin.material} position={[0,3,0]}/>
+      <mesh castShadow geometry={nodes.foodin.geometry} material={nodes.foodin.material} position={[0,3,0]} scale={[4,4,4]}/>
     </group>
   )
 }

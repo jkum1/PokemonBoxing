@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/NidoranM.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.NidoranM.geometry} material={nodes.NidoranM.material} scale={[0.3,0.3,0.3]}/>
+      <mesh castShadow geometry={nodes.NidoranM.geometry} material={nodes.NidoranM.material} scale={[0.4,0.4,0.4]}/>
     </group>
   )
 }

@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Magikarp.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.koiking.geometry} material={nodes.koiking.material} rotation={[Math.PI/2,0,0]} position={[0,3,0]}/>
+      <mesh castShadow geometry={nodes.koiking.geometry} material={nodes.koiking.material} rotation={[Math.PI/2,0,0]} position={[0,10,0]} scale={[3,3,3]}/>
     </group>
   )
 }

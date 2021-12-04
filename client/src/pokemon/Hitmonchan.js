@@ -12,9 +12,9 @@ export default function Model({ ...props }) {
   )
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.polygon0.geometry} material={nodes.polygon0.material} />
-      <mesh castShadow geometry={nodes.polygon1.geometry} material={nodes.polygon1.material} />
-      <mesh castShadow geometry={nodes.polygon2.geometry} material={nodes.polygon2.material} />
+      <mesh castShadow geometry={nodes.polygon0.geometry} material={nodes.polygon0.material} scale={[2,2,2]}/>
+      <mesh castShadow geometry={nodes.polygon1.geometry} material={nodes.polygon1.material} scale={[2,2,2]}/>
+      <mesh castShadow geometry={nodes.polygon2.geometry} material={nodes.polygon2.material} scale={[2,2,2]}/>
     </group>
   )
 }

@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Scyther.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.strike.geometry} material={nodes.strike.material} rotation={[Math.PI/2,0,0]} position={[0,2,0]}/>
+      <mesh castShadow geometry={nodes.strike.geometry} material={nodes.strike.material} rotation={[Math.PI/2,0,0]} position={[0,5,0]} scale={[2,2,2]}/>
     </group>
   )
 }

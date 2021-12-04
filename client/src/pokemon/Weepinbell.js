@@ -12,7 +12,7 @@ export default function Model({ ...props }) {
   )
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.Weepinbell.geometry} material={nodes.Weepinbell.material} scale={[0.1,0.1,0.1]} position={[0,3,0]}/>
+      <mesh castShadow geometry={nodes.Weepinbell.geometry} material={nodes.Weepinbell.material} scale={[0.3,0.3,0.3]} position={[0,4,0]}/>
     </group>
   )
 }

@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Rattata.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.koratta.geometry} material={nodes.koratta.material} rotation={[Math.PI/2,0,0]} scale={[1.5,1.5,1.5]}/>
+      <mesh castShadow geometry={nodes.koratta.geometry} material={nodes.koratta.material} rotation={[Math.PI/2,0,0]} scale={[3,3,3]}/>
     </group>
   )
 }

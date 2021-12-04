@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Tauros.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.kentauros.geometry} material={nodes.kentauros.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.kentauros.geometry} material={nodes.kentauros.material} rotation={[Math.PI/2,0,0]} scale={[1.5,1.5,1.5]}/>
     </group>
   )
 }

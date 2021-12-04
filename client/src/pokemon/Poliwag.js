@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Poliwag.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.nyoromo.geometry} material={nodes.nyoromo.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.nyoromo.geometry} material={nodes.nyoromo.material} rotation={[Math.PI/2,0,0]} scale={[3,3,3]}/>
     </group>
   )
 }

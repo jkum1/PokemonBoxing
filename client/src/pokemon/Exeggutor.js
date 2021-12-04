@@ -12,7 +12,7 @@ export default function Model({ ...props }) {
   )
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.nassy.geometry} material={nodes.nassy.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.nassy.geometry} material={nodes.nassy.material} rotation={[Math.PI/2,0,0]} scale={[1.5,1.5,1.5]}/>
     </group>
   )
 }

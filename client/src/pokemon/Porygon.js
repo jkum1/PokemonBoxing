@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Porygon.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.Porygon.geometry} material={nodes.Porygon.material} scale={[0.1,0.1,0.1]}/>
+      <mesh castShadow geometry={nodes.Porygon.geometry} material={nodes.Porygon.material} scale={[0.3,0.3,0.3]}/>
     </group>
   )
 }

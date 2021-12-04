@@ -12,7 +12,7 @@ export default function Model({ ...props }) {
   )
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.sand.geometry} material={nodes.sand.material} position={[0,3,0]}/>
+      <mesh castShadow geometry={nodes.sand.geometry} material={nodes.sand.material} position={[0,5,0]} scale={[3,3,3]}/>
     </group>
   )
 }

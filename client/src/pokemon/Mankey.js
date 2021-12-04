@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Mankey.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.mankey.geometry} material={nodes.mankey.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.mankey.geometry} material={nodes.mankey.material} rotation={[Math.PI/2,0,0]} scale={[3,3,3]}/>
     </group>
   )
 }

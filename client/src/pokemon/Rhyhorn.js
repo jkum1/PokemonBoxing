@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Rhyhorn.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.sihorn.geometry} material={nodes.sihorn.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.sihorn.geometry} material={nodes.sihorn.material} rotation={[Math.PI/2,0,0]} scale={[2,2,2]}/>
     </group>
   )
 }

@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Magneton.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.rarecoil.geometry} material={nodes.rarecoil.material} rotation={[Math.PI/2,0,0]} position={[0,6,0]}/>
+      <mesh castShadow geometry={nodes.rarecoil.geometry} material={nodes.rarecoil.material} rotation={[Math.PI/2,0,0]} position={[0,20,0]} scale={[3,3,3]}/>
     </group>
   )
 }

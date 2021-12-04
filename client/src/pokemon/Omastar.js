@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Omastar.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.omstar.geometry} material={nodes.omstar.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.omstar.geometry} material={nodes.omstar.material} rotation={[Math.PI/2,0,0]} scale={[2,2,2]}/>
     </group>
   )
 }

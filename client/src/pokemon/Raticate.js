@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Raticate.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.ratta.geometry} material={nodes.ratta.material} />
+      <mesh castShadow geometry={nodes.ratta.geometry} material={nodes.ratta.material} rotation={[Math.PI/2,0,0]} scale={[3,3,3]}/>
     </group>
   )
 }

@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Fearow.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.onidrill.geometry} material={nodes.onidrill.material} rotation={[Math.PI/2,0,0]} position={[0,3,0]}/>
+      <mesh castShadow geometry={nodes.onidrill.geometry} material={nodes.onidrill.material} rotation={[Math.PI/2,0,0]} position={[0,5,0]} scale={[2,2,2]}/>
     </group>
   )
 }

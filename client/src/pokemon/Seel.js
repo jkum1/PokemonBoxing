@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Seel.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.pawou.geometry} material={nodes.pawou.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.pawou.geometry} material={nodes.pawou.material} rotation={[Math.PI/2,0,0]} scale={[3,3,3]}/>
     </group>
   )
 }

@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Ivysaur.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.fushigisou.geometry} material={nodes.fushigisou.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.fushigisou.geometry} material={nodes.fushigisou.material} rotation={[Math.PI/2,0,0]} scale={[2,2,2]}/>
     </group>
   )
 }

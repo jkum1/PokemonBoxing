@@ -10,8 +10,8 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Zubat.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.polygon0.geometry} material={nodes.polygon0.material} />
-      <mesh castShadow geometry={nodes.polygon1.geometry} material={nodes.polygon1.material} />
+      <mesh castShadow geometry={nodes.polygon0.geometry} material={nodes.polygon0.material} scale={[3,3,3]} position={[0,-30,0]}/>
+      <mesh castShadow geometry={nodes.polygon1.geometry} material={nodes.polygon1.material} scale={[3,3,3]} position={[0,-30,0]}/>
     </group>
   )
 }

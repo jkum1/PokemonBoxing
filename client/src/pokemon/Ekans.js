@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes } = useGLTF('/pokemonGLB/Ekans.glb')
   return (
     <group ref={group} {...props} dispose={null}>
-      <mesh castShadow geometry={nodes.arbo.geometry} material={nodes.arbo.material} rotation={[Math.PI/2,0,0]}/>
+      <mesh castShadow geometry={nodes.arbo.geometry} material={nodes.arbo.material} rotation={[Math.PI/2,0,0]} scale={[5,5,5]}/>
     </group>
   )
 }
