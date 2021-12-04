@@ -7,12 +7,21 @@ import Form from './Form.js';
 import Data from './Data.js';
 
 function App() {
-  const [pokemonName, setPokemonName] = useState('Abra');
+  const [pokemonName, setPokemonName] = useState('');
   const [pokemonModel, setPokemonModel] = useState();
 
   var changeName = function(name) {
+    window.localStorage.setItem('pokemonName', name);
     setPokemonName(name);
   }
+
+  useEffect(() => {
+    if (window.localStorage.getItem('pokemonName')) {
+      setPokemonName(window.localStorage.getItem('pokemonName'));
+    } else {
+      setPokemonName('Lapras');
+    }
+  }, []);
 
   useEffect(() => {
     let mounted = true;
@@ -27,8 +36,6 @@ function App() {
 
   return (
     <>
-      <Form changeName={changeName}/>
-      <Data name={pokemonName}/>
       <Canvas
         colorManagement
         shadows
@@ -50,6 +57,9 @@ function App() {
           shadow-camera-top={50}
           shadow-camera-bottom={-50}
         />
+
+        <Form changeName={changeName}/>
+        <Data name={pokemonName}/>
 
         <group>
           <mesh receiveShadow rotation={[-Math.PI/2,0,0]} position={[0,-1,0]}>
