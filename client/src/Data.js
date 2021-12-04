@@ -6,7 +6,7 @@ export default function Data(props) {
 
   useEffect(() => {
     let mounted = true;
-    if (mounted) {
+    if (mounted && props.name !== 'Error') {
       var path = 'https://pokeapi.co/api/v2/pokemon/' + props.name.toLowerCase();
       axios.get(path)
       .then((info, err) => {
@@ -24,6 +24,15 @@ export default function Data(props) {
       .catch(err => {
         console.log(err);
       });
+    } else if (props.name === 'Error') {
+      var final = {
+        name: 'Error',
+        height: 'Error',
+        moveset: 'Error',
+        type: 'Error',
+        weight: 'Error'
+      };
+      setData(final);
     }
     return function cleanup() {
       mounted = false;
