@@ -6,7 +6,7 @@ export default function Data(props) {
 
   useEffect(() => {
     let mounted = true;
-    if (mounted && props.name !== 'Error') {
+    if (mounted && props.name !== 'Error' && props.name !== 'Luffy') {
       var path = 'https://pokeapi.co/api/v2/pokemon/' + props.name.toLowerCase();
       axios.get(path)
       .then((info, err) => {
@@ -33,6 +33,15 @@ export default function Data(props) {
         weight: 'Error'
       };
       setData(final);
+    } else if (props.name === 'Luffy') {
+      var luffyFacts = {
+        name: 'Luffy',
+        height: '5.66',
+        moveset: 'Gum Gum',
+        type: 'Pirate',
+        weight: '120'
+      };
+      setData(luffyFacts);
     }
     return function cleanup() {
       mounted = false;
