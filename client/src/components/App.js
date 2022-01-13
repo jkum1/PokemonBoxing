@@ -36,8 +36,7 @@ function App() {
   useEffect(() => {
     let mounted = true;
     if (mounted) {
-      const OtherComponent = React.lazy(() => import('./pokemon/' + pokemonName + '.js'));
-      // const OtherComponent = React.lazy(() => import('./pokemon/Lapras.js'));
+      const OtherComponent = React.lazy(() => import('../pokemon/' + pokemonName + '.js'));
       setPokemonModel(<OtherComponent/>)
     }
     return function cleanup() {
@@ -85,7 +84,6 @@ function App() {
             </mesh>
           </group>
           {pokemonModel}
-          {/* <Lapras/> */}
         </Suspense>
 
       </Canvas>
