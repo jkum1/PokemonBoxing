@@ -5,7 +5,7 @@
 
 Displays a 3d model of any of the first gen pokemon as well as some info about the pokemon.
 
-<img src='./Demo.png' height='400px'/>
+<img src='./Demo_copy.png' height='400px'/>
 
 ## Tech Stack
 *********
